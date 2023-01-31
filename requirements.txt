@@ -1,0 +1,4 @@
+wget
+farm-haystack[milvus,preprocessing]
+fastapi
+uvicorn[standard]
