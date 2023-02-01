@@ -51,18 +51,11 @@ services:
     build:
       context: .
       args:
-        BASE_IMAGE: "pytorch/pytorch:1.12.1-cuda11.3-cudnn8-runtime"
+        BASE_IMAGE: "bitnami/pytorch:1.12.1"
     volumes:
       - ${DOCKER_VOLUME_DIRECTORY:-.}/volumes/qa:/app/data
     ports:
-      - "8000:8000"
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: 1
-              capabilities: [gpu]
+      - "18500:8000"
     depends_on:
       - "milvus"
 
