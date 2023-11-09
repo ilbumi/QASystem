@@ -1,4 +1,4 @@
 wget
-farm-haystack[milvus,preprocessing]
+farm-haystack[milvus2,preprocessing]
 fastapi
 uvicorn[standard]
